@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+/* BASE */
+* {
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(135deg, #8e7dff, #ff9ecf);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+}
+
+/* CARD (MAIN FIX + MODERN LOOK) */
+.card{
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+
+  min-height: 85vh;
+  width: min(800px, 90%);
+
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2em;
+  overflow: hidden;
+}
+
+/* IMAGE FIX */
+img.birthday{
+  width: 220px;
+  height: auto;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+}
+
+/* TEXT FIX */
+.text{
+  padding: 1em;
+  color: #333;
+}
+
+.text p{
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+/* MUTED TEXT */
+.muted{
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* RESPONSIVE (OPTIONAL) */
+@media only screen and (min-width: 768px) {
+  .card{
+    flex-direction: row-reverse;
+  }
+
+  .card img.birthday{
+    width: 200px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card{
+  animation: fadeIn 1s ease-in-out;
+}
+
+.card:hover{
+  transform: scale(1.01);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.2);
+}
+
+img.birthday{
+  transition: transform 0.3s ease;
+}
+
+img.birthday:hover{
+  transform: scale(1.05) rotate(-2deg);
+}
