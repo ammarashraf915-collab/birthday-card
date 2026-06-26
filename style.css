@@ -68,6 +68,7 @@ img.birthday{
 
     font-size:2rem;
     margin-bottom:20px;
+    animation:title 1.5s ease;
 
 }
 
