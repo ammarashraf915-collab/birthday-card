@@ -1,108 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  transition:all .2s ease-in-out;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    transition:0.2s ease-in-out;
 }
 
 body{
-  background: linear-gradient(
-    135deg,
-    #8e7dff,
-    #ff9ecf
-  );
+    background:linear-gradient(135deg,#8e7dff,#ff9ecf);
+    font-family:"Open Sans",sans-serif;
 
-  min-height:100vh;
+    min-height:100vh;
 
-  display:flex;
-  justify-content:center;
-  align-items:center;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
 
-  padding:20px;
-
-  font-family:"Open Sans",sans-serif;
+    padding:20px;
 }
 
 /* CARD */
 
 .card{
-  background:rgba(255,255,255,.88);
 
-  backdrop-filter:blur(12px);
+    background:rgba(255,255,255,.9);
+    backdrop-filter:blur(12px);
 
-  width:min(900px,95%);
+    width:min(900px,95%);
 
-  border-radius:25px;
+    border-radius:25px;
 
-  box-shadow:
-  0 25px 60px rgba(0,0,0,.15);
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
 
-  padding:2rem;
+    display:flex;
+    flex-direction:column;
 
-  display:flex;
-  flex-direction:column;
+    align-items:center;
 
-  align-items:center;
-  justify-content:center;
+    text-align:center;
 
-  text-align:center;
+    padding:2rem;
 }
 
 /* IMAGE */
 
 img.birthday{
 
-  width:220px;
-  height:auto;
+    width:220px;
+    height:auto;
 
-  margin-bottom:20px;
+    margin-bottom:20px;
 
-  filter:
-  drop-shadow(
-  0 10px 20px rgba(0,0,0,.2)
-  );
+    filter:drop-shadow(0 10px 20px rgba(0,0,0,.2));
 
-  animation:float 3s ease-in-out infinite;
+    animation:float 3s ease-in-out infinite;
 }
 
 /* TEXT */
 
 .text{
-  color:#333;
+    color:#333;
 }
 
 .text h1{
-  font-size:2rem;
-  margin-bottom:1rem;
+
+    font-size:2rem;
+    margin-bottom:20px;
+
 }
 
 .text p{
-  line-height:1.8;
-  font-size:1rem;
-  margin-bottom:12px;
+
+    font-size:1rem;
+    line-height:1.8;
+    margin-bottom:16px;
+
 }
 
 .muted{
-  opacity:.7;
-  font-style:italic;
+
+    opacity:.7;
+    font-style:italic;
+    margin-top:15px;
+
 }
 
-/* LAPTOP */
+/* DESKTOP */
 
 @media (min-width:768px){
 
-  .card{
-    flex-direction:row-reverse;
-    gap:40px;
-    text-align:left;
-  }
+    .card{
 
-  img.birthday{
-    width:250px;
-    margin-bottom:0;
-  }
+        flex-direction:row-reverse;
+
+        gap:45px;
+
+        text-align:left;
+
+        align-items:center;
+
+    }
+
+    img.birthday{
+
+        width:260px;
+        margin-bottom:0;
+
+    }
 
 }
 
@@ -110,39 +115,55 @@ img.birthday{
 
 @media (max-width:767px){
 
-  .card{
-    width:95%;
-    padding:1.5rem;
-  }
+    body{
 
-  img.birthday{
-    width:180px;
-  }
+        padding:10px;
 
-  .text h1{
-    font-size:1.8rem;
-  }
+    }
 
-  .text p{
-    font-size:.95rem;
-  }
+    .card{
+
+        width:100%;
+        padding:1.5rem;
+
+    }
+
+    img.birthday{
+
+        width:180px;
+        margin-bottom:15px;
+
+    }
+
+    .text h1{
+
+        font-size:1.8rem;
+
+    }
+
+    .text p{
+
+        font-size:1rem;
+        line-height:1.7;
+
+    }
 
 }
 
-/* FLOAT ANIMATION */
+/* FLOAT */
 
 @keyframes float{
 
-  0%{
-    transform:translateY(0);
-  }
+    0%{
+        transform:translateY(0);
+    }
 
-  50%{
-    transform:translateY(-10px);
-  }
+    50%{
+        transform:translateY(-10px);
+    }
 
-  100%{
-    transform:translateY(0);
-  }
+    100%{
+        transform:translateY(0);
+    }
 
 }
